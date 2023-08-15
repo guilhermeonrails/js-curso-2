@@ -1,106 +1,148 @@
 # Resolução dos desafios 2
 
-Em uma carreira de desenvolvimento de software, a prática consistente da lógica de programação desempenha um papel fundamental na construção de bases sólidas. A lógica de programação não apenas permite a criação de algoritmos eficientes e soluções elegantes, mas também desenvolve a capacidade de pensar de forma estruturada e analítica. Essa habilidade é essencial para enfrentar desafios complexos e transformar problemas abstratos em implementações tangíveis. 
+Entender listas em programação é fundamental, pois elas representam uma maneira eficaz de organizar e manipular conjuntos de dados relacionados. Uma lista, também conhecida como array em muitas linguagens de programação, permite armazenar múltiplos valores em uma única estrutura, o que simplifica o acesso e a gestão dos dados. A importância de compreender listas reside na capacidade de lidar com coleções de informações de maneira sistemática, permitindo que programas realizem tarefas como armazenamento, busca, ordenação e processamento de dados de forma eficiente e estruturada.
 
 Pensando nisso, criamos uma lista de atividades (não obrigatórias) focada em prática para melhorar ainda mais sua experiência de aprendizagem.
 []()
 
 #### Sugestões de respostas
 
-1) Crie uma função que calcule o índice de massa corporal (IMC) de uma pessoa, a partir de sua altura, em metros, e peso, em quilogramas, que serão recebidos como parâmetro:
-
+1) Crie uma lista vazia, com o nome `listaGenerica`.
 ```js
-
-function calculaIMC(altura, peso){
-
-  let imc = peso / (alturaMetros * alturaMetros);
-}
-
+let listaGenerica = [];
 ```
 
-2) Crie uma função que calcule o valor do fatorial de um número passado como parâmetro.
+
+
+2) Crie uma lista de linguagens de programação chamada `linguagensDeProgramacao`.
 
 ```js
-function calcularFatorial(numero) {
-  if (numero === 0 || numero === 1) {
-    return 1;
-  }
-
-  let fatorial = 1;
-  for (let i = 2; i <= numero; i++) {
-    fatorial *= i;
-  }
-
-  return fatorial;
-}
-
-// Exemplo de uso
-let numero = 5;
-let resultado = calcularFatorial(numero);
-console.log(`O fatorial de ${numero} é ${resultado}`);
+let linguagensDeProgramacao = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
 ```
-
-3) Crie uma função que converte um valor em dólar, passado como parâmetro, e retorna o valor equivalente em reais. Para isso, considere a cotação do dólar igual a R$ 4,80.
-
+3) Adicione à lista `linguagensDeProgramacao` os seguintes elementos.
+linguagensDeProgramacao.push('Java', 'Ruby', 'GoLang');
 ```js
-function converterDolarParaReal(valorEmDolar) {
-  let cotacaoDolar = 4.80;
-  let valorEmReais = valorEmDolar * cotacaoDolar;
-  return valorEmReais.toFixed(2);
-}
-
-// Exemplo de uso
-let valorEmDolar = 50;
-let valorEmReais = converterDolarParaReal(valorEmDolar);
-console.log(`${valorEmDolar} dólares equivalem a R$ ${valorEmReais}`);
+let linguagensDeProgramacao = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
 ```
-
-4) Crie uma função que mostre na tela a área e o perímetro de uma sala retangular, utilizando altura e largura que serão dadas como parâmetro.
-
+4) Crie uma função que mostra no console todos os elementos da lista `linguagensDeProgamacao` separadamente.
 
 ```js
-function calcularAreaPerimetroSalaRetangular(altura, largura) {
-  let area = altura * largura;
-  let perimetro = 2 * (altura + largura);
-  
-  console.log(`Área da sala: ${area} metros quadrados`);
-  console.log(`Perímetro da sala: ${perimetro} metros`);
-}
-
-// Exemplo de uso
-let altura = 3; // em metros
-let largura = 5; // em metros
-calcularAreaPerimetroSalaRetangular(altura, largura);
-
-```
-
-5) Crie uma função que mostre na tela a área e o perímetro de uma sala circular, utilizando seu raio que será fornecido como parâmetro. Considere Pi = 3,14.
-   
-```js
-function calcularAreaPerimetroSalaCircular(raio) {
-  let area = Math.PI * raio * raio;
-  let perimetro = 2 * Math.PI * raio;
-  
-  console.log(`Área da sala circular: ${area.toFixed(2)} metros quadrados`);
-  console.log(`Perímetro da sala circular: ${perimetro.toFixed(2)} metros`);
-}
-
-// Exemplo de uso
-let raio = 4; // em metros
-calcularAreaPerimetroSalaCircular(raio);
-```  
-
-6)  Crie uma função que mostre na tela a tabuada de um número dado como parâmetro.
-
-```js
-function mostrarTabuada(numero) {
-  for (let i = 1; i <= 10; i++) {
-    let resultado = numero * i;
-    console.log(`${numero} x ${i} = ${resultado}`);
+function mostrarLinguagensSeparadamente() {
+  for (let i = 0; i < linguagensDeProgramacao.length; i++) {
+    console.log(linguagensDeProgramacao[i]);
   }
 }
 
-// Exemplo de uso
-let numero = 7;
-mostrarTabuada(numero);
+mostrarLinguagensSeparadamente();
+```
+5) Crie uma função que mostra no console todos os elementos da lista `linguagensDeProgamacao` separadamente de maneira inversa.
+
+```js
+function mostrarLinguagensReversoSeparadamente() {
+  for (let i = linguagensDeProgramacao.length - 1; i >= 0; i--) {
+    console.log(linguagensDeProgramacao[i]);
+  }
+}
+
+mostrarLinguagensReversoSeparadamente();
+
+```
+6) Crie uma função que calcula a média dos elementos em uma lista de números.
+
+```js
+function calcularMedia(lista) {
+  let soma = 0;
+  for (let i = 0; i < lista.length; i++) {
+    soma += lista[i];
+  }
+  return soma / lista.length;
+}
+
+let numeros = [10, 20, 30, 40, 50];
+let media = calcularMedia(numeros);
+console.log('Média:', media);
+```
+7) Crie uma função que mostra no console o maior e o menor número em uma lista.
+
+```js
+function encontrarMaiorMenor(lista) {
+  let maior = lista[0];
+  let menor = lista[0];
+
+  for (let i = 1; i < lista.length; i++) {
+    if (lista[i] > maior) {
+      maior = lista[i];
+    }
+    if (lista[i] < menor) {
+      menor = lista[i];
+    }
+  }
+
+  console.log('Maior:', maior);
+  console.log('Menor:', menor);
+}
+
+let numeros = [15, 8, 25, 5, 12];
+encontrarMaiorMenor(numeros);
+```
+8) Crie uma função que retorna a soma de todos os elementos em uma lista.
+
+```js
+function calcularSoma(lista) {
+  let soma = 0;
+  for (let i = 0; i < lista.length; i++) {
+    soma += lista[i];
+  }
+  return soma;
+}
+
+let numeros = [15, 8, 25, 5, 12];
+let soma = calcularSoma(numeros);
+console.log('Soma:', soma);
+```
+9) Crie uma função que recebe uma lista como parâmetro e retorne o índice de um elemento também passado como parâmetro. Caso esse elemento não exista na lista, retorne -1.
+
+```js
+function encontrarIndiceElemento(lista, elemento) {
+  for (let i = 0; i < lista.length; i++) {
+    if (lista[i] === elemento) {
+      return i; // Retorna o índice do elemento encontrado
+    }
+  }
+  return -1; // Retorna -1 se o elemento não for encontrado na lista
+}
+
+let numeros = [15, 8, 25, 5, 12];
+let indiceEncontrado = encontrarIndiceElemento(numeros, 25);
+console.log('Índice de 25:', indiceEncontrado); // Deve imprimir o índice 2
+
+```
+10)  Crie uma função que recebe duas listas de números do mesmo tamanho e retorna uma nova lista com a soma elemento a elemento.
+
+```js
+function somarListas(lista1, lista2) {
+  let novaLista = [];
+  for (let i = 0; i < lista1.length; i++) {
+    novaLista.push(lista1[i] + lista2[i]);
+  }
+  return novaLista;
+}
+let listaA = [1, 2, 3];
+let listaB = [10, 20, 30];
+console.log('Soma de listas:', somarListas(listaA, listaB));
+```
+11)  Crie uma função que recebe uma lista de números e retorna uma nova lista com o quadrado de cada número.
+
+```js
+function quadradoDeCadaNumero(lista) {
+  let novaLista = [];
+  for (let i = 0; i < lista.length; i++) {
+    novaLista.push(lista[i] * lista[i]);
+  }
+  return novaLista;
+}
+
+let numeros = [2, 3, 4, 5, 6];
+let listaQuadrados = quadradoDeCadaNumero(numeros);
+console.log('Lista de Quadrados:', listaQuadrados);
 ```
