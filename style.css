@@ -27,8 +27,8 @@ body::before {
 }
 
 .container {
-    width: 1200px;
-    height: 600px;
+    width: 80%;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -62,10 +62,6 @@ body::before {
     font-weight: 700;
     border: none;
     margin-top: 2rem;
-}
-
-button:disabled {
-    background-color: gray;
 }
 
 .container__texto {
@@ -108,4 +104,37 @@ button {
 .texto__paragrafo {
     font-size: 32px;
     font-weight: 400;
+}
+
+button:disabled {
+    background-color: gray;
+}
+
+@media screen and (max-width: 1250px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .container__botao {
+        font-size: 16px;
+    }
+
+
+    .texto__paragrafo {
+        font-size: 24px;
+    }
+
+    .container__imagem-pessoa {
+        display: none;
+    }
+
+    .container__conteudo {
+        display: block;
+        position: inherit;
+    }
+
+    .container__informacoes {
+        padding: 1rem
+    }
 }
