@@ -34,7 +34,7 @@ function verificarChute() {
 }
 
 function gerarNumeroAleatorio() {
-    return parseInt(Math.random() * numeroLimite + 4);
+    return parseInt(Math.random() * 3 + 1);
 }
 
 function limparCampo() {
