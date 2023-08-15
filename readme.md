@@ -1,4 +1,4 @@
-# Resolução dos desafios 1
+# Resolução dos desafios 2
 
 Em uma carreira de desenvolvimento de software, a prática consistente da lógica de programação desempenha um papel fundamental na construção de bases sólidas. A lógica de programação não apenas permite a criação de algoritmos eficientes e soluções elegantes, mas também desenvolve a capacidade de pensar de forma estruturada e analítica. Essa habilidade é essencial para enfrentar desafios complexos e transformar problemas abstratos em implementações tangíveis. 
 
@@ -6,68 +6,68 @@ Pensando nisso, criamos uma lista de atividades (não obrigatórias) focada em p
 []()
 
 #### Sugestões de respostas
-2) 
-```js
-let titulo = document.querySelector('h1');
-titulo.innerHTML = 'Hora do Desafio';
-```
-3) No `index.html`, adicionamos no onclick o seguinte código:
 
-```html 
-<button onclick="exibirMensagemNoConsole()" class="button">Console</button>
-```
-
-- Já no `app.js`:
-
-```js
-function exibirMensagemNoConsole() {
-    console.log('O botão foi clicado!')
-}
-```
-
-4) No `index.html`, adicionamos no onclick o seguinte código:
-
-```html 
-<button onclick="exibirAlerta()" class="button">Alert</button>
-```
-
-- Já no `app.js`:
+1) Criar uma função que exibe "Olá, mundo!" no console.
 
 ```js 
-function exibirAlerta() {
-    alert('Eu amo Js')
+function exibirOla() {
+  console.log("Olá, mundo!");
 }
+
+exibirOla();
 ```
 
-5) No `index.html`, adicionamos no onclick o seguinte código:
-
-```html 
-<button onclick="exibirPrompt()" class="button">Prompt</button>
-```
-
-- Já no `app.js`:
+2) Criar uma função que recebe um nome como parâmetro e exibe "Olá, [nome]!" no console.
 
 ```js
-function exibirPrompt() {
-    let nomeDaCidade = prompt('Digite o nome de uma cidade do Brasil que você gosta muito:')
-    alert(`Estive em ${nomeDaCidade} e lembrei de você`)
+function exibirOlaNome(nome) {
+  console.log(`Olá, ${nome}!`);
 }
+
+exibirOlaNome("Alice");
 ```
 
-6) No `index.html`, adicionamos no onclick o seguinte código:
 
-```html 
- <button onclick="somandoDoisNumeros()" class="button">Soma</button>
-```
-
-- Já no `app.js`:
+3) Criar uma função que recebe um número como parâmetro e retorna o dobro desse número.
 
 ```js 
-function somandoDoisNumeros() {
-    let primeiroNumero = parseInt(prompt('Digite o primeiro número'));
-    let segundoNumero = parseInt(prompt('Digite o segundo número'));
-    let resultado = primeiroNumero + segundoNumero;
-    alert(`${primeiroNumero} + ${segundoNumero} = ${resultado}`)
+function calcularDobro(numero) {
+  return numero * 2;
 }
+
+let resultadoDobro = calcularDobro(5);
+console.log(resultadoDobro);
 ```
 
+4) Criar uma função que recebe três números como parâmetros e retorna a média deles.
+
+```js
+function calcularMedia(a, b, c) {
+  return (a + b + c) / 3;
+}
+
+let media = calcularMedia(4, 7, 10);
+console.log(media);
+```
+
+5) Criar uma função que recebe dois números como parâmetros e retorna o maior deles.
+
+```js 
+function encontrarMaior(a, b) {
+  return a > b ? a : b;
+}
+
+let maiorNumero = encontrarMaior(15, 9);
+console.log(maiorNumero);
+```
+
+6) Criar uma função que recebe um número como parâmetro e retorna a raiz quadrada desse número.
+
+```js 
+function calcularRaizQuadrada(numero) {
+  return numero * numero;
+}
+
+let raizQuadrada = calcularRaizQuadrada(25);
+console.log(raizQuadrada);
+```
