@@ -64,10 +64,10 @@ console.log(maiorNumero);
 6) Criar uma função que recebe um número como parâmetro e retorna a raiz quadrada desse número.
 
 ```js 
-function calcularRaizQuadrada(numero) {
+function quadrado(numero) {
   return numero * numero;
 }
 
-let raizQuadrada = calcularRaizQuadrada(25);
-console.log(raizQuadrada);
+let resultado = quadrado(2);
+console.log(resultado);
 ```
