@@ -12,17 +12,17 @@ Pensando nisso, criamos uma lista de atividades (não obrigatórias) focada em p
 let listaGenerica = [];
 ```
 
-
-
 2) Crie uma lista de linguagens de programação chamada `linguagensDeProgramacao`.
 
 ```js
 let linguagensDeProgramacao = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
 ```
-3) Adicione à lista `linguagensDeProgramacao` os seguintes elementos.
-linguagensDeProgramacao.push('Java', 'Ruby', 'GoLang');
+3) Adicione à lista `linguagensDeProgramacao` os seguintes elementos: Java, Ruby e GoLang.
+
 ```js
 let linguagensDeProgramacao = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
+linguagensDeProgramacao.push('Java', 'Ruby', 'GoLang');
+// Estado final: ['JavaScript', 'C', 'C++', 'Kotlin', 'Python','Java', 'Ruby', 'GoLang']
 ```
 4) Crie uma função que mostra no console todos os elementos da lista `linguagensDeProgamacao` separadamente.
 
